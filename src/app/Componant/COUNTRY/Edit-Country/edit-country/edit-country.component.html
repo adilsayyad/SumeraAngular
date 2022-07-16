@@ -1,0 +1,22 @@
+
+<div class="container my-5">
+    <h1 class="mb-3"> Edit Country </h1>
+    <form #form="ngForm" (ngSubmit)="UpdateCountry()">
+        <div class="row">
+            <div class="col-6">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id" readonly name="id" [(ngModel)]="countryDetails.id">
+                <label for="code" class="form-label">Name</label>
+                <input type="text" class="form-control" id="code" name="name" [(ngModel)]="countryDetails.name">
+           
+                <label for="name" class="form-label">Code</label>
+                <input type="text" class="form-control" id="name" name="code" [(ngModel)]="countryDetails.code">
+            </div>
+        </div>
+        <button  type="submit" class="btn btn-primary ms-5 mt-5">Submit</button>
+        <button  type="button" class="btn btn-danger ms-5 mt-5" (click)="deleteCountry(countryDetails.id)">Delete</button>
+    </form>
+
+
+
+</div>

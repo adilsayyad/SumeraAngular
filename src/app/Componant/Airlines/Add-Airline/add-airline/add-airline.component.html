@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow" >
+  <div class="container-fluid">
+          <!-- <h6 class="display-6 text-secondary" style="font-family:Brush Script MT, Brush Script Std, cursive;">Sumera Tours And Travel</h6> -->
+          <img src="https://seeklogo.com/images/B/beach-tour-logo-4505456896-seeklogo.com.png"  height="70px">
+          <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarNavAltMarkup">
+      <div class="navbar-nav"  style="justify-content:center ; margin-left:20%;">
+        <!-- <a class="nav-link active text-secondary m-2"  aria-current="page" href="#"><i class="fas fa-plane" style="font-size:20px;text-align: center;"></i></a>
+        <a class="nav-link text-secondary m-2" href="#"><i class="fas fa-hotel" style="font-size:20px;text-align: center; "></i></a>
+        <a class="nav-link text-secondary m-2" href="#"><i class="fas fa-home" style="font-size:20px;text-align: center; "></i></a>
+        <a class="nav-link text-secondary m-2 " href="#"><i class="fas fa-bus" style="font-size:20px;text-align: center; "></i></a>
+        <a class="nav-link text-secondary m-2" href="#"><i class="fas fa-umbrella-beach" style="font-size:20px;text-align: center; "></i></a>
+        <a class="nav-link text-secondary m-2" href="#"><i class="fab fa-cc-visa" style="font-size:20px;text-align: center; "></i></a> -->
+   <a class="nav-link text-dark" aria-current="page" routerLink="/countries">Country list</a>
+   <!-- <a class="nav-link text-dark" aria-current="page" routerLink="/countries-add">Add Country</a>  -->
+  <a class="nav-link text-dark" aria-current="page" routerLink="/city">City list</a> 
+  <a class="nav-link text-dark" aria-current="page" routerLink="/airlines">Airline list</a>  
+        <a class="nav-link text-secondary m-2" href="#"  ><i class="fas fa-user-circle text-success" style="font-size:30px;margin-left: 230px;">&nbsp; <span class="text-secondary mb-2" style="font-size:20px ;">Hello Admin</span> </i></a>
+       <button class="btn-sm text-dark m-2 btn-outline-danger" style="margin-left: 30px;"> <a class="nav-link "  aria-current="page" [routerLink]="['/home']">Log Out</a></button>
+     </div>
+    </div>
+  </div>
+</nav>  
+
+<div class="container-fluid  card col-md-12 col-lg-12" style="background-image:url(https://planetofhotels.com/guide/sites/default/files/styles/node__blog_post__bp_banner/public/2021-01/Toy-airplane.jpg); background-size: cover;  ">
+
+  
+  <h1 class="mb-3 text-center bg-warning text-light p-2"> Add new Airline</h1>
+
+  <div class="row p-5">
+
+
+        <form #Form="ngForm" (ngSubmit)="addAirline()" class="pl-5">
+            <div class="mb-3 ">              <input type="text" class="form-control w-25" name="Name" id="name" [(ngModel)] ="addAirlineRequest.code" placeholder="Enter Airline Code">
+            </div>
+            <div class="mb-3">
+      
+                <input type="text" class="form-control  w-25" name="countryRefId" id="code" [(ngModel)] ="addAirlineRequest.name" placeholder="Enter Airline Name">
+             
+              <div class="mb-3">
+              
+                <input type="text" class="form-control  w-25" name="Name" id="name" [(ngModel)] ="addAirlineRequest.short_name" placeholder="Enter Short Name">
+              </div> </div>
+              <div class="mb-3">
+              
+                <input type="text" class="form-control  w-25" name="Name" id="id" [(ngModel)] ="addAirlineRequest.city_ref_id" placeholder="Enter City Id">
+              </div>
+              <div class="mb-3">
+     
+                <input type="text" class="form-control  w-25" name="Name" id="pincode" [(ngModel)] ="addAirlineRequest.pincode" placeholder="Enter Pincode">
+              </div>
+              <div class="mb-3">
+   
+                <input type="text" class="form-control  w-25" name="Name" id="logo" [(ngModel)] ="addAirlineRequest.logo" placeholder="Enter Logo">
+              </div>
+              <div class="mb-3">
+
+                <input type="text" class="form-control  w-25" name="Name" id="address1" [(ngModel)] ="addAirlineRequest.address1" placeholder="Enter Address">
+              </div>
+              <div class="mb-3">
+        
+                <input type="text" class="form-control  w-25" name="Name" id="address2" [(ngModel)] ="addAirlineRequest.address2" placeholder="Enter Second Address">
+              </div>
+              <div class="mb-3">
+    
+                <input type="text" class="form-control  w-25" name="Name" id="address3" [(ngModel)] ="addAirlineRequest.address3" placeholder="Enter Third Address">
+              </div>
+              <div class="mb-3">
+             
+                <input type="text" class="form-control  w-25" name="telephone" id="telephone" [(ngModel)] ="addAirlineRequest.telephone" placeholder="Telephone ">
+              </div>
+              <div class="mb-3">
+             
+                <input type="text" class="form-control  w-25" name="Telephone" id="telephone2" [(ngModel)] ="addAirlineRequest.telephone2" placeholder="Telephone 2">
+              </div>
+              <div class="mb-3">
+         
+                <input type="text" class="form-control  w-25" name="email" id="Email" [(ngModel)] ="addAirlineRequest.email" placeholder="Enter Email">
+              </div>
+              <div class="mb-3">
+               
+                <input type="text" class="form-control  w-25" name="Email" id="email2" [(ngModel)] ="addAirlineRequest.email2" placeholder="Enter Email2">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+   
+</div>
+</div>
